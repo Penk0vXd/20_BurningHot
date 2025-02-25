@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burning Hot Slot Machine</title>
+    <title>Modern Slot Machine</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="game-container">
         <div class="top-bar">
-            <div class="balance-container">
-                <span>Balance: $</span>
-                <span id="balance">5000.00</span>
-            </div>
-            <div class="last-win">
-                <span>Last Win: $</span>
-                <span id="last-win-amount">0.00</span>
+            <div class="balance-info">
+                <div class="balance-container">
+                    <span>Balance: $</span>
+                    <span id="balance">5000.00</span>
+                </div>
+                <div class="last-win">
+                    <span>Last Win: $</span>
+                    <span id="last-win-amount">0.00</span>
+                </div>
             </div>
         </div>
-        
+
         <div class="slot-machine">
             <div class="paylines left">
                 <div>20</div>
@@ -46,7 +48,7 @@
             </div>
         </div>
 
-        <div class="controls">
+        <div class="controls-section">
             <div class="bet-controls">
                 <button id="decrease-bet" class="bet-button">-</button>
                 <div class="current-bet-container">
@@ -55,16 +57,31 @@
                 </div>
                 <button id="increase-bet" class="bet-button">+</button>
             </div>
-            
-            <button id="spin-button" class="spin-button">SPIN</button>
-            
-            <div class="bet-options">
-                <button class="bet-option" data-bet="20">0.20</button>
-                <button class="bet-option" data-bet="40">0.40</button>
-                <button class="bet-option" data-bet="100">1.00</button>
-                <button class="bet-option" data-bet="200">2.00</button>
-                <button class="bet-option" data-bet="400">4.00</button>
+
+            <div class="bet-container">
+                <button id="lower-bets" class="bet-switch active" title="Lower Bets">
+                    <span>↓</span>
+                </button>
+                <div class="bet-options" id="lower-bet-options">
+                    <button class="bet-option" data-bet="20">0.20</button>
+                    <button class="bet-option" data-bet="40">0.40</button>
+                    <button class="bet-option" data-bet="100">1.00</button>
+                    <button class="bet-option" data-bet="200">2.00</button>
+                    <button class="bet-option" data-bet="400">4.00</button>
+                </div>
+                <div class="bet-options hidden" id="higher-bet-options">
+                    <button class="bet-option" data-bet="1000">10.00</button>
+                    <button class="bet-option" data-bet="2000">20.00</button>
+                    <button class="bet-option" data-bet="5000">50.00</button>
+                    <button class="bet-option" data-bet="10000">100.00</button>
+                    <button class="bet-option" data-bet="20000">200.00</button>
+                </div>
+                <button id="higher-bets" class="bet-switch" title="Higher Bets">
+                    <span>↑</span>
+                </button>
             </div>
+
+            <button id="spin-button" class="spin-button">SPIN</button>
         </div>
     </div>
 
