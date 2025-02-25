@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burning Hot Slot Machine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="top-bar">
+            <div class="balance-container">
+                <span>Balance: $</span>
+                <span id="balance">5000.00</span>
+            </div>
+            <div class="last-win">
+                <span>Last Win: $</span>
+                <span id="last-win-amount">0.00</span>
+            </div>
+        </div>
+        
+        <div class="slot-machine">
+            <div class="paylines left">
+                <div>20</div>
+                <div>15</div>
+                <div>10</div>
+                <div>5</div>
+                <div>1</div>
+            </div>
+            
+            <div class="reels-container">
+                <div id="win-lines"></div>
+                <div class="reel" id="reel0"></div>
+                <div class="reel" id="reel1"></div>
+                <div class="reel" id="reel2"></div>
+                <div class="reel" id="reel3"></div>
+                <div class="reel" id="reel4"></div>
+            </div>
+            
+            <div class="paylines right">
+                <div>20</div>
+                <div>15</div>
+                <div>10</div>
+                <div>5</div>
+                <div>1</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="bet-controls">
+                <button id="decrease-bet" class="bet-button">-</button>
+                <div class="current-bet-container">
+                    <span>BET: $</span>
+                    <span id="current-bet">20.00</span>
+                </div>
+                <button id="increase-bet" class="bet-button">+</button>
+            </div>
+            
+            <button id="spin-button" class="spin-button">SPIN</button>
+            
+            <div class="bet-options">
+                <button class="bet-option" data-bet="20">0.20</button>
+                <button class="bet-option" data-bet="40">0.40</button>
+                <button class="bet-option" data-bet="100">1.00</button>
+                <button class="bet-option" data-bet="200">2.00</button>
+                <button class="bet-option" data-bet="400">4.00</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/symbols.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
